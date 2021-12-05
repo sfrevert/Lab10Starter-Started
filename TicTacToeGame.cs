@@ -200,6 +200,27 @@ namespace Lab10Starter
         {
             CurrentPlayer = (CurrentPlayer == Player.X) ? Player.O : Player.X;
         }
+
+        /// <summary>
+        /// Increases the score of the indicated player
+        /// </summary>
+        /// <param name="victor"> The player whose score is being increased </param>
+        public void IncreaseScore(Player victor)
+        {
+            if (victor == Player.X)
+            {
+                scores[(int)Player.X]++;
+            }
+            else if (victor == Player.O)
+            {
+                scores[(int)Player.O]++;
+            }
+            else if (victor == Player.Both)
+            {
+                scores[(int)Player.X]++;
+                scores[(int)Player.O]++;
+            }
+        }
     }
 
 

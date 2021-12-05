@@ -79,6 +79,7 @@ namespace Lab10Starter
         private void CelebrateVictory(Player victor)
         {
             MessageBox.Show(Application.Current.MainWindow, String.Format("Congratulations, {0}, you're the big winner today", victor.ToString()));
+            ticTacToe.IncreaseScore(victor);
             XScoreLBL.Content = String.Format("X's Score: {0}", ticTacToe.XScore);
             OScoreLBL.Content = String.Format("O's Score: {0}", ticTacToe.OScore);
 
